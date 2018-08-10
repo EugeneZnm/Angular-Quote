@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+// 1 import class class Quote
+import { Quote} from './quote';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Quote';
+
+  // 2 create array of instances of class Quote
+  quote = [
+    new Quote(1, 'what does not kill you', 'Nietzsche', 'Luther')
+  ];
+
+  constructor () { }
 }
