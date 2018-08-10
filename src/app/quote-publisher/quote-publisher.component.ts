@@ -8,12 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuotePublisherComponent implements OnInit {
 
-  constructor() { }
-
   // 2 create array of instances of class Quote
   quote = [
     new Quote(1, 'what does not kill you', 'Nietzsche', 'Luther')
   ];
+  constructor() { }
 
   ngOnInit() {
   }

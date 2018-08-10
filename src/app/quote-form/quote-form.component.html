@@ -1,3 +1,32 @@
-<p>
-  quote-form works!
-</p>
+<!DOCTYPE html>
+<div>
+    <form>
+
+        <!--Quote-->
+        <div class="form-group">
+            <div>
+                <label for="saying">Your Quote</label>
+                <!--Display of Quote-->
+                <textarea class="form-control" id="saying"></textarea>
+            </div>
+        </div>
+
+        <!--Author of Quote-->
+        <div class="form-group">
+            <div>
+                <label for="author">Quote By:</label>
+                <input type="text" required class="form-control" id="Author Name">
+            </div>
+        </div>
+
+        <!--Publisher of Quote-->
+        <div class="form-group">
+            <div>
+                <label for="publisher">Posted By:</label>
+                <input type="text" required class="form-control" id="publisher">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success btn-lg">Publish Quote</button>
+    </form>
+
+</div>
