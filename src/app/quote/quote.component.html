@@ -8,10 +8,10 @@
     </div>
 
     <!--Quotes Section-->
-    <div class="col-md-7" *ngFor='let quote of quotes'>
+    <div class="col-md-7">
         <!--Display of Quotes-->
         <ul>
-            <li>{{quote.id + quote.saying}}</li>
+            <li *ngFor='let quote of quote'>{{quote.id + quote.saying}}</li>
         </ul>
 
     </div>
