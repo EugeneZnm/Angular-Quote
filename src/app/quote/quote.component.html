@@ -11,8 +11,10 @@
     <div class="col-md-7">
         <!--Display of Quotes-->
         <ul>
-            <li *ngFor='let quote of quote'>{{quote.id + quote.saying}}</li>
+            <li *ngFor='let quote of quote'>{{quote.saying + "&nbsp;"+"quote by:" + "&nbsp;" + quote.author}}</li>
         </ul>
+
+
 
     </div>
 </div>
