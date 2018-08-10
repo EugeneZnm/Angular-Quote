@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-// 1 import class class Quote
+// 1 import class Quote
 import { Quote} from './quote';
 
 @Component({

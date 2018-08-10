@@ -1,5 +1,5 @@
 export class Quote {
 
     // 2 defining properties of class Quote
-    constructor( public id: number, public saying: string, public publisher: string, public author: string) { }
+    constructor( public id: number, public saying: string, public author: string, public publisher: string) { }
 }
