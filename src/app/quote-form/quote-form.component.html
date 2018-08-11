@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <div>
-    <form>
+    <form #quoteForm='ngForm'>
 
         <!--Quote-->
+        <!--1 Enable form to monitor changes and validity of input elements-->
         <div class="form-group">
             <div>
                 <label for="saying">Your Quote</label>
                 <!--Display of Quote-->
-                <textarea class="form-control" id="saying"></textarea>
+
+                <!--Two way data binding-->
+
+                <!--2 ngModel added and equated to newQuote object and definition of name attribute-->
+                <textarea class="form-control" id="saying" [(ngModel)]="newQuote.saying" name="saying" #saying="ngModel" required></textarea>
+                <div [hidden]="saying.valid || saying.pristine" class="alert alert-danger">
+                    <p>Input Quote</p>
+                </div>
             </div>
         </div>
 
@@ -15,7 +23,10 @@
         <div class="form-group">
             <div>
                 <label for="author">Quote By:</label>
-                <input type="text" required class="form-control" id="Author Name">
+                <input type="text" required class="form-control" id="Author" [(ngModel)]="newQuote.Author" name="Author" #Author="ngModel">
+                <div [hidden]="Author.valid || Author.pristine" class="alert alert-danger">
+                    <p>Input Author Name</p>
+                </div>
             </div>
         </div>
 
@@ -23,7 +34,10 @@
         <div class="form-group">
             <div>
                 <label for="publisher">Posted By:</label>
-                <input type="text" required class="form-control" id="publisher">
+                <input type="text" required class="form-control" id="publisher" [(ngModel)]="newQuote.publisher" name="publisher" #publisher="ngModel">
+            </div>
+            <div [hidden]="publisher.valid || publisher.pristine" class="alert alert-danger">
+                <p>Input Publisher</p>
             </div>
         </div>
         <button type="submit" class="btn btn-success btn-lg">Publish Quote</button>
