@@ -14,6 +14,13 @@ export class QuoteComponent implements OnInit {
     new Quote(1, 'what does not kill you', 'Nietzsche', 'Luther')
   ];
 
+   // create addNewQuote function
+  addNewQuote(quote) {
+   const quoteLength = this.quote.length;
+   quote.id = quoteLength + 1;
+   this.quote.push(quote);
+  }
+
   constructor() { }
 
   ngOnInit() {

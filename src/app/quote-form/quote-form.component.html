@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <div>
-    <form #quoteForm='ngForm'>
+    <!--calling submit quote function-->
+    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
 
         <!--Quote-->
         <!--1 Enable form to monitor changes and validity of input elements-->
@@ -8,8 +9,6 @@
             <div>
                 <label for="saying">Your Quote</label>
                 <!--Display of Quote-->
-
-                <!--Two way data binding-->
 
                 <!--2 ngModel added and equated to newQuote object and definition of name attribute-->
                 <textarea class="form-control" id="saying" [(ngModel)]="newQuote.saying" name="saying" #saying="ngModel" required></textarea>
