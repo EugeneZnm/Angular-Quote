@@ -22,8 +22,8 @@
         <div class="form-group">
             <div>
                 <label for="author">Quote By:</label>
-                <input type="text" required class="form-control" id="Author" [(ngModel)]="newQuote.Author" name="Author" #Author="ngModel">
-                <div [hidden]="Author.valid || Author.pristine" class="alert alert-danger">
+                <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required>
+                <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
                     <p>Input Author Name</p>
                 </div>
             </div>

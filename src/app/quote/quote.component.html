@@ -10,13 +10,14 @@
     <!--Quotes Section-->
     <div class="col-md-7">
         <!--Display of Quotes-->
-        <ul class="card">
-            <li class="card-title" *ngFor='let quote of quote'>{{quote.saying + "&nbsp;"}}
-                <app-quote-author class="card-title"></app-quote-author>
-                <app-quote-publisher></app-quote-publisher>
-                <!--Output event calling quote delete function-->
-                <button (click)='quoteDelete(true)' class="btn btn-danger"> Delete Quote</button>
-            </li>
-        </ul>
+        <div>
+            <ul class="card">
+                <li class="card-title" *ngFor='let quote of quote'>{{quote.saying + "&nbsp;"}} <br> Quote By: {{quote.author}}
+                    <br> published by: {{quote.publisher}}
+                    <!--Output event calling quote delete function-->
+                    <button (click)='quoteDelete(true)' class="btn btn-danger"> Delete Quote</button>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
