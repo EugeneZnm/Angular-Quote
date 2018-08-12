@@ -30,16 +30,16 @@ export class QuoteComponent implements OnInit {
    quote.id = quoteLength + 1;
    this.quote.push(quote);
   }
- // 6 deleteQuote function taking boolean value and index of goal
-  deleteQuote(isComplete) {
-    if (isComplete) {
-      const toDelete = confirm(`YOU STILL CANNOT TAKE IT BACK!!'${this.quote[index].saying}`);
+//  // 6 deleteQuote function taking boolean value and index of goal
+//   deleteQuote(isComplete) {
+//     if (isComplete) {
+//       const toDelete = confirm(`YOU STILL CANNOT TAKE IT BACK!!'${this.quote[index].saying}`);
 
-      if (toDelete) {
-        this.quote.splice(index, 1);
-      }
-    }
-  }
+//       if (toDelete) {
+//         this.quote.splice(index, 1);
+//       }
+//     }
+//   }
   constructor() { }
 
   ngOnInit() {
