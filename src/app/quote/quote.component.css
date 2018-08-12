@@ -1,0 +1,49 @@
+.delete {
+    width: 200px;
+    margin-top: 10px;
+    position: relative;
+    left: 30%;
+}
+
+.card {
+    width: 500px;
+}
+
+.ul {
+    text-align: center;
+}
+
+.quote {
+    text-align: center;
+    font-family: fantasy;
+    background-color: black;
+    color: white;
+    height: 60px;
+}
+
+.forma {
+    position: relative;
+    left: 10%;
+}
+
+.quot1 {
+    position: relative;
+    left: 10%;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.list1 {
+    box-shadow: 5px 5px gray;
+    background-color: bisque;
+}
+
+.container-fluid {
+    box-shadow: 7px 10px gainsboro;
+    width: 1500px;
+    position: relative;
+    left: 6%;
+    margin-right: 20px;
+    background-color: antiquewhite;
+}

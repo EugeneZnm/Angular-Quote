@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<h1>QUOTES</h1>
+<h1 class="quote">QUOTES</h1>
 <div class="container-fluid row">
     <!--Quote Creation Form-->
-    <div class="col-md-5">
+    <div class="col-md-5 forma jumbotron">
         <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
 
     </div>
 
     <!--Quotes Section-->
-    <div class="col-md-7">
+    <div class="col-md-7 quot1">
         <!--Display of Quotes-->
         <div>
-            <ul class="card">
-                <li class="card-title" *ngFor='let quote of quote'>{{quote.saying + "&nbsp;"}} <br> Quote By: {{quote.author}}
-                    <br> published by: {{quote.publisher}}
+            <ul>
+                <li class="card list1" *ngFor='let quote of quote'>{{quote.saying + "&nbsp;"}} <br> Quote By: {{quote.author}}
+                    <br> published by: {{quote.publisher}} <br>
                     <!--Output event calling quote delete function-->
-                    <button (click)='quoteDelete(true)' class="btn btn-danger"> Delete Quote</button>
-                </li>
+                    <button (click)='quoteDelete(true)' class="btn btn-danger delete"> Delete Quote</button>
+                </li> <br>
             </ul>
         </div>
     </div>
