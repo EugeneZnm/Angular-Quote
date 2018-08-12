@@ -12,7 +12,7 @@
         <!--Display of Quotes-->
         <div>
             <ul>
-                <li class="card mb-3 list1" *ngFor='let quote of quote; let i = index'>{{quote.saying + "&nbsp;"}} <br> published on: {{quote.dateCreated|date}}<br> Quote By: {{quote.author}}
+                <li class="card mb-3 list1" *ngFor='let quote of quote; let i = index'>{{quote.saying + "&nbsp;"}} ~<span class="saidby">{{quote.author}}</span> published on: {{quote.dateCreated|date}}<br> live for:{{quote.dateCreated|dateCounter}} day
                     <br> published by: {{quote.publisher}} <br>
                     <!--Output event calling quote delete function-->
                     <button (click)='quoteDelete(true)' class="btn btn-danger delete"> Delete Quote</button>

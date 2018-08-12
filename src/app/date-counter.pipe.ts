@@ -7,7 +7,7 @@ export class DateCounterPipe implements PipeTransform {
    // value type any being date object from quote
   transform(value: any): number {
     // getting current date using new Date function
-    const today:Date = new Date();
+    const today: Date = new Date();
     const todayWithNoTime: any = new Date(today.getFullYear(), today.getMonth(), today.getDate());
     // return value
     const dateDifference = Math.abs(value - todayWithNoTime );
@@ -17,7 +17,7 @@ export class DateCounterPipe implements PipeTransform {
 
     const dateCounter = dateDifferenceSeconds / secondsInADay;
 
-    if (dateCounter >= 1){
+    if (dateCounter >= 1) {
         return dateCounter;
     } else {
         return 0;
