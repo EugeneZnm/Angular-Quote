@@ -12,7 +12,7 @@ export class QuoteComponent implements OnInit {
 
     // 2 create array of instances of class Quote
   quote = [
-    new Quote(1, 'what does not kill you', 'Nietzsche', 'Luther')
+    new Quote(1, 'what does not kill you', 'Nietzsche', 'Luther', new Date (2018, 7, 14))
   ];
 
   @Input()  Quote: Quote;
