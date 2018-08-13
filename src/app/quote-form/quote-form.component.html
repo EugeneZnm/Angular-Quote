@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <div>
     <!--calling submit quote function-->
-    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+    <form (ngSubmit)='submitQuote();quoteForm.reset()' #quoteForm='ngForm'>
 
         <!--Quote-->
         <!--1 Enable form to monitor changes and validity of input elements-->
