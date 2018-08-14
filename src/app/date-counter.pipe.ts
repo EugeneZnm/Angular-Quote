@@ -8,9 +8,9 @@ export class DateCounterPipe implements PipeTransform {
   transform(value: any): number {
     // getting current date using new Date function
     const today: Date = new Date();
-    const todayWithNoTime: any = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+    const todayWithTime: any = new Date(today.getFullYear(), today.getMonth(), today.getDate(), today.getHours());
     // return value
-    const dateDifference = Math.abs(value - todayWithNoTime );
+    const dateDifference = Math.abs(value - todayWithTime );
     const secondsInADay = 86400;
     // conversion to seconds
     const dateDifferenceSeconds = dateDifference * 0.001;

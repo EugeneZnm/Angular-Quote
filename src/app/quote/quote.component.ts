@@ -11,12 +11,18 @@ export class QuoteComponent implements OnInit {
 
     // 2 create array of instances of class Quote
   quote = [
-    new Quote(1, 'what does not kill you', 'Nietzsche', 'Luther', 0, 0, new Date (2018, 7, 14))
+    new Quote(1, 'what does not kill you', 'Nietzsche', 'Luther', 0, 0, new Date (2018, 7, 14, 12))
   ];
 
   @Input()  Quote: Quote;
   // 4 emitter object taking a boolean
   @Output() isComplete = new EventEmitter<boolean>();
+
+  quoteComplete(isComplete, index) {
+    if (isComplete) {
+      this.quote.splice(index, 1);
+    }
+  }
 
    // 3 create addNewQuote function
   addNewQuote( quote) {
@@ -24,7 +30,7 @@ export class QuoteComponent implements OnInit {
    quote.id = quoteLength + 1;
    this.quote.push(quote);
   }
- // 5 deleteQuote function taking boolean value and index of goal
+ // 5 deleteQuote function taking boolean value of quote
   deleteQuote(complete: boolean) {
     this.isComplete.emit(complete);
   }
