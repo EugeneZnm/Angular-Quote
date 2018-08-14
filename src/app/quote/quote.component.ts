@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 // 1 import Quote class
 import {Quote} from '../quote';
 
@@ -15,14 +15,6 @@ export class QuoteComponent implements OnInit {
   ];
 
   @Input()  Quote: Quote;
-  // 4 emitter object taking a boolean
-  @Output() isComplete = new EventEmitter<boolean>();
-
-  quoteComplete(isComplete, index) {
-    if (isComplete) {
-      this.quote.splice(index, 1);
-    }
-  }
 
    // 3 create addNewQuote function
   addNewQuote( quote) {
@@ -31,8 +23,8 @@ export class QuoteComponent implements OnInit {
    this.quote.push(quote);
   }
  // 5 deleteQuote function taking boolean value of quote
-  deleteQuote(complete: boolean) {
-    this.isComplete.emit(complete);
+  deleteQuote(index) {
+    this.quote.splice(index, 1);
   }
  // upvote function
 upVote(index) {
